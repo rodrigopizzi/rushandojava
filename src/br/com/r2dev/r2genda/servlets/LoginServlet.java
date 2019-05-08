@@ -35,7 +35,7 @@ public class LoginServlet extends HttpServlet {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 
-			con = DriverManager.getConnection("jdbc:oracle:thin:@10.7.0.92:1527:xe", "martinez", "vfktd0103");
+			con = DriverManager.getConnection("jdbc:oracle:thin:@10.7.0.108:1527:xe", "martinez", "vfktd0103");
 
 			ps = con.prepareStatement("select *" + 
 					"  from usuario u" + 
@@ -50,7 +50,7 @@ public class LoginServlet extends HttpServlet {
 				request.getSession().setAttribute("usuario", usuario);
 				
 				String contextPath = request.getContextPath();
-				response.sendRedirect(contextPath + "/agenda.html");
+				response.sendRedirect(contextPath + "/index.jsp");
 				return;
 			}
 			

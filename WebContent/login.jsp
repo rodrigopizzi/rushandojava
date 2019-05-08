@@ -21,7 +21,7 @@
 
 if (erro != null) { %>
 	
-	<h1><% out.print(erro); %></h1>
+	<h1><%=erro%></h1>
 	
 <% } %>
 
